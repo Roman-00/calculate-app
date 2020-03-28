@@ -1,12 +1,9 @@
-let num = 266219;
-let res = 1;
+const num = 266219;
 
-num = num.toString();
-
-for (let i = 0; i < num.length; i++ ) {
-  res *= num[i];
-}
-
+const res = String(num).split('').reduce((multiplyсation, current) => multiplyсation * current, 1);
 console.log(res);
-console.log(res ** 3);
-console.log((res ** 3).toString().slice(0, 2));
+
+const exp = res ** 3;
+console.log(exp);
+
+console.log(String(exp).slice(0, 2));
