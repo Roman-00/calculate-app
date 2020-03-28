@@ -1,20 +1,12 @@
-const money = 225500;
-const income = 'Создание сайтов';
-const addExpenses = 'Налоги, Хостинг, Avacode, Интернет';
-const deposit = true;
-const mission = 5000000;
-const period = 5;
+let num = 266219;
+let res = 1;
 
-console.log(typeof money);
-console.log(typeof income);
-console.log(addExpenses.length);
-console.log(addExpenses.toLowerCase());
-console.log(addExpenses.split(', '));
-console.log(typeof deposit);
-console.log('"Период равен ' + period + ' месяцев" ' + 'и ' + '"Цель заработать ' + mission + ' тенге"');
+num = num.toString();
 
+for (let i = 0; i < num.length; i++ ) {
+  res *= num[i];
+}
 
-// Вычисление budgetDay
-const daileBudget = money / 30;
-const budgetDay = daileBudget;
-console.log(budgetDay);
+console.log(res);
+console.log(res ** 3);
+console.log((res ** 3).toString().slice(0, 2));
