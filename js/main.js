@@ -13,6 +13,7 @@ const period = 12;
 console.log(typeof money);
 console.log(typeof income);
 console.log(typeof deposit);
+console.log(income.length);
 
 console.info('Период равен ' + period + ' месяцев');
 console.info('Цель накопить ' + mission + ' KZT');
