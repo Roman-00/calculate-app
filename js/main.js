@@ -1,10 +1,9 @@
 'use strict'
 
-const lang = 'ru';
+const lang = 'en';
 
 const daysWeekRu = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 const daysWeekEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
 
 // вывод дней недели через условия if & else
 if (lang === 'ru') {
@@ -25,14 +24,12 @@ switch (lang) {
 
 // вывод дней недли через многомерный массив
 
-const langs = ['ru', 'en'];
-const langsId = langs.indexOf(lang);
-const arrDaysWeek = [
-  daysWeekRu,
-  daysWeekEn
-];
+const weeks = {
+  'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+  'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+};
 
-console.log(arrDaysWeek[langsId]);
+console.log(weeks[lang]);
 
 
 const namePerson = 'Евгений',
