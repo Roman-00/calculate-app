@@ -75,7 +75,7 @@ const getTargetMonth = function() {
   return Math.ceil(mission / accumulatedMonth);
 };
 
-console.log('Цель будет достигнута за ' + getTargetMonth() + ' месяца');
+console.log(getTargetMonth() < 0 ? 'Цель не будет достигнута' : `Цель будет достигнута за ${getTargetMonth()} мес`);
 
 
 const budgetDay = accumulatedMonth / 30;
