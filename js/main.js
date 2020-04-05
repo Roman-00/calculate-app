@@ -1,19 +1,21 @@
 'use strict';
 
-const newFunction = function (argument) {
-  if(typeof argument !== 'string') {
-    console.log('Функция передает не строку!!');
-  }
+const array = ['234', '432', '564', '6754', '123', '', '312'];
 
-  // Условия убирают пробелы с обоих сторон и заменяются на ...
-  let extension = argument.trim();
-  if(extension.length > 30) {
-    extension = extension.substring(0, 30) + '...';
+array.forEach(element => {
+  if (element[0] === '2' || element[0] === '4') {
+    console.log(element);
   }
+});
 
-  return extension;
+// Выводим простые числа в столбик и подставляем делитель числа
+
+primeNumbers:
+for (let i = 2; i < 100; i++) {
+  for (let number = 2; number < i; number++) {
+    if (i % number === 0) {
+      continue primeNumbers;
+    }    
+  }
+  console.log(i + ': делитель этого числа 1 и ' + i);
 }
-
-//newFunction(11);
-
-console.log(newFunction('12345678901234567890asdqwezxcr 12345678901234567890'));
