@@ -1,4 +1,33 @@
 'use strict';
+
+const startButton = document.getElementById('start');
+const btnPlusIncomeAdd = document.getElementsByTagName('button')[0];
+const btnPlusExpensesAdd = document.getElementsByTagName('button')[1];
+const depositCheck = document.querySelector('#deposit-check');
+const additionalIncomeItem = document.querySelectorAll('.additional_income-item');
+
+// Получение данных с правой стороны
+const budgetMonthValue = document.querySelector('.budget_month-value');
+const budgetDayValue = document.querySelector('.budget_day-value');
+const expensesMonthValue = document.querySelector('.expenses_month-value');
+const additionalIncomeValue = document.querySelector('.additional_income-value');
+const additionalExpensesValue = document.querySelector('.additional_expenses-value');
+const incomePeriodValue = document.querySelector('.income_period-value');
+const targetMonthValue = document.querySelector('.target_month-value');
+
+// Получение остальных инпутов для ввода
+const salaryAmount = document.querySelector('.salary-amount');
+const incomeTitle = document.querySelector('.income-title');
+const incomeAmount = document.querySelector('.income-amount');
+const expensesTitle = document.querySelector('.expenses-title');
+const expensesAmount = document.querySelector('.expenses-amount');
+const additionalExpensesItem = document.querySelector('.additional_expenses-item');
+const targetAmount = document.querySelector('.target-amount');
+const range = document.querySelector('.range');
+const periodAmount = document.querySelector('.period-amount');
+
+
+
 const isNumber = function(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 };
