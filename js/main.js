@@ -82,6 +82,8 @@ const appData = {
   },
   addExpensesBlock: function() {
     let cloneExpensesItems = expensesItems[0].cloneNode(true);
+      cloneExpensesItems.querySelector('.expenses-title').value = '';
+      cloneExpensesItems.querySelector('.expenses-amount').value = '';
     expensesItems[0].parentNode.insertBefore(cloneExpensesItems, btnPlusExpensesAdd);
     expensesItems = document.querySelectorAll('.expenses-items');
     if(expensesItems.length === 3) {
@@ -90,6 +92,8 @@ const appData = {
   },
   addIncomeBlock: function() {
     let cloneIncomeItems = incomeItems[0].cloneNode(true);
+      cloneIncomeItems.querySelector('.income-title').value = '';
+      cloneIncomeItems.querySelector('.income-amount').value = '';
     incomeItems[0].parentNode.insertBefore(cloneIncomeItems, btnPlusIncomeAdd);
     incomeItems = document.querySelectorAll('.income-items');
     if(incomeItems.length === 3) {
@@ -171,6 +175,11 @@ const appData = {
     return appData.budgetMonth * periodSelect.value;
   },
   changlePeriodSelect: function() {
+    let asignValue = function () {
+      incomePeriodValue.value = appData.calcSavedMoney();
+    }
+
+    asignValue();
     periodAmount.textContent = periodSelect.value;
   }
 };
