@@ -1,25 +1,25 @@
 'use strict';
 
-const array = ['234', '432', '564', '6754', '123', '', '312'];
+const weekDays = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+const styleWeek = [
+    'font-style: italic;',
+    'font-weight: bold;'
+];
 
-for (let i = 0; i < array.length; i++){
-    
-  let res = array[i];
-    res = res.slice(0,1);
+const date = new Date();
 
-  if(res == 2 || res == 4){
-      console.log(array[i]);
-  }
-}
-
-// Выводим простые числа в столбик и подставляем делитель числа
-
-primeNumbers:
-for (let i = 2; i < 100; i++) {
-  for (let number = 2; number < i; number++) {
-    if (i % number === 0) {
-      continue primeNumbers;
-    }    
-  }
-  console.log(i + ': делитель этого числа 1 и ' + i);
-}
+weekDays.forEach(function(element, item) {
+    if (item < 5) {
+        if (item == date.getDay() - 1) {
+            console.log('%c' + element, styleWeek[1]);
+        } else {
+            console.log(element);
+        }
+    } else {
+        if (item == date.getDay() - 1) {
+            console.log('%c' + element, styleWeek[0] + styleWeek[1]);
+        } else {
+            console.log('%c' + element, styleWeek[0]);
+        }
+    }
+});
