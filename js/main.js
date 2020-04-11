@@ -2,11 +2,15 @@
 
 const array = ['234', '432', '564', '6754', '123', '', '312'];
 
-array.forEach(element => {
-  if (element[0] === '2' || element[0] === '4') {
-    console.log(element);
+for (let i = 0; i < array.length; i++){
+    
+  let res = array[i];
+    res = res.slice(0,1);
+
+  if(res == 2 || res == 4){
+      console.log(array[i]);
   }
-});
+}
 
 // Выводим простые числа в столбик и подставляем делитель числа
 
