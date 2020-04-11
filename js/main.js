@@ -25,8 +25,8 @@ let expensesItems = document.querySelectorAll('.expenses-items');
 let incomeItems = document.querySelectorAll('.income-items');
 const additionalExpensesItem = document.querySelector('.additional_expenses-item');
 const targetAmount = document.querySelector('.target-amount');
-const range = document.querySelector('.range');
 const periodAmount = document.querySelector('.period-amount');
+const range = document.querySelector('.range');
 const periodSelect = document.querySelector('.period-select');
 const incomeItem = document.querySelectorAll('.income-items');
 
@@ -172,8 +172,7 @@ const appData = {
   },
   changlePeriodSelect: function() {
     periodAmount.textContent = periodSelect.value;
-    incomePeriodValue.value = appData.calcPeriodMoney();
-  },
+  }
 };
 
 start.addEventListener('click', appData.start);
