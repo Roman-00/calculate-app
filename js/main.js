@@ -190,9 +190,9 @@ const appData = {
   changlePeriodSelect: function() {
     let asignValue = function () {
       incomePeriodValue.value = appData.calcSavedMoney();
-    }
-
+    };
     asignValue();
+
     periodAmount.textContent = periodSelect.value;
   },
   reset: function() {
