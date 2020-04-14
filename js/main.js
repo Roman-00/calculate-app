@@ -28,9 +28,9 @@ let expensesItems = document.querySelectorAll('.expenses-items');
 let incomeItems = document.querySelectorAll('.income-items');
 const additionalExpensesItem = document.querySelector('.additional_expenses-item');
 const targetAmount = document.querySelector('.target-amount');
-const periodAmount = document.querySelector('.period-amount');
+let periodAmount = document.querySelector('.period-amount');
 const range = document.querySelector('.range');
-const periodSelect = document.querySelector('.period-select');
+let periodSelect = document.querySelector('.period-select');
 const incomeItem = document.querySelectorAll('.income-items');
 
 const isNumber = function(n) {
@@ -217,6 +217,8 @@ const appData = {
     this.deposit = false;
     this.percentDeposit = 0;
     this.moneyDeposit = 0;
+    periodSelect.value = 1;
+    periodAmount.textContent = '1';
   },
 };
 
