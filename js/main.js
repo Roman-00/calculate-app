@@ -238,6 +238,15 @@ salaryAmount.addEventListener('input', () => {
     start.disabled = true;    
    }
 });
+
+//Cлово с большой буквы и разделены запятой и пробелом
+let newStr = appData.addExpenses;
+newStr.forEach(function(element, item) {
+  let result;
+  element = element.trim();
+  result = element.replace(element[0], element[0].toUpperCase()); 
+  newStr[item] = result;
+});
 /*if (appData.getTargetMonth() > 0) {
 console.log('Цель будет достигнута за ' + Math.ceil(appData.getTargetMonth()) + ' месяцев');
 } else {
