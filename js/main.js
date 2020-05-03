@@ -41,17 +41,17 @@ const inputRefresh = () => {
   let inputString = document.querySelectorAll('[placeholder="Наименование"]');
   let inputNumber = document.querySelectorAll('[placeholder="Сумма"]');
 
-  inputString.forEach(el => {
-    el.addEventListener('input',()=> {
-      el.value = el.value.replace(/[^а-яА-Я ,.!]/,'');
+  inputString.forEach(element => {
+    element.addEventListener('input',()=> {
+      element.value = element.value.replace(/[^а-яА-Я ,.!]/,'');
     });
   });
-  inputNumber.forEach(el => {
-    el.addEventListener('input',()=> {
-      el.value = el.value.replace(/[^0-9]/,'');
+  inputNumber.forEach(element => {
+    element.addEventListener('input',()=> {
+      element.value = element.value.replace(/[^0-9]/,'');
     });
   });
-}
+};
 inputRefresh();
 
 let money,
