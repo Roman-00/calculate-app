@@ -1,25 +1,21 @@
 'use strict';
 
 const weekDays = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
-const styleWeek = [
-    'font-style: italic;',
-    'font-weight: bold;'
-];
+let date = new Date().getDay() ;
+let arr = [];
 
-const date = new Date();
+weekDays.forEach((el, i) => {
+  arr.push(el);
 
-weekDays.forEach(function(element, item) {
-    if (item < 5) {
-        if (item == date.getDay() - 1) {
-            console.log('%c' + element, styleWeek[1]);
-        } else {
-            console.log(element);
-        }
-    } else {
-        if (item == date.getDay() - 1) {
-            console.log('%c' + element, styleWeek[0] + styleWeek[1]);
-        } else {
-            console.log('%c' + element, styleWeek[0]);
-        }
-    }
+  if (date === i) {
+    arr[i] = el.italics();
+  } 
+  if (el === 'вс' || el === 'сб') {
+    arr[i] = el.bold();
+  }   
+  if ((el === 'вс' && date === i) || (el === 'сб' && date === i)) {
+    arr[i] = el.italics().bold();
+  } 
 });
+
+document.write(arr.join('\n'));
