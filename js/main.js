@@ -38,6 +38,9 @@ const range = document.querySelector('.range');
 let periodSelect = document.querySelector('.period-select');
 const incomeItem = document.querySelectorAll('.income-items');
 
+const incomeAdd = document.querySelector('.income_add');
+const expensesAdd = document.querySelector('.expenses_add');
+
 const isNumber = function(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 };
@@ -63,6 +66,17 @@ const inputRefresh = () => {
   });
 };
 inputRefresh();
+const disabledInputText = () => {
+  let inpitText = document.querySelectorAll('[type="text"]:not(.result-total)');
+
+  inpitText.forEach(element => {
+    element.disabled = true;
+  });
+  start.style.display = 'none';
+  cancel.style.display = 'block';
+  incomeAdd.disabled = true;
+  expensesAdd.disabled = true;
+};
 
 class AppData {
   constructor(){
@@ -100,7 +114,7 @@ class AppData {
     this.getBudget();
     
     this.showResult();
-  
+
     const dataInputText = calc.querySelectorAll('.data input[type="text"]');
         const dataInputTextArray = Array.prototype.slice.call(dataInputText);
         dataInputTextArray.forEach((input) => {
